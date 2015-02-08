@@ -6,7 +6,8 @@ class MeetingsController < ApplicationController
   before_filter :find_project
   before_filter :authorize, :except => [:index, :meetings]
   before_filter :find_optional_project, :only => [:index]
-  
+
+  helper :queries
   helper :journals
   helper :projects
   include ProjectsHelper

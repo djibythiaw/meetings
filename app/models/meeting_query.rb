@@ -5,7 +5,8 @@ class MeetingQuery < Query
   def initialize(attributes=nil, *args)
     super attributes, *args
     self.filters.delete 'status_id' if self.filters.respond_to? :delete
-    self.filters['status'] = {:operator => "=", :values => ["0"]}
+    self.filters ||= {'status' => {:operator => "=", :values => ["0"]} }
+    #self.filters['status'] = {:operator => "=", :values => ["0"]}
     @is_for_all = project.nil?
     
     @available_columns = [
