@@ -26,7 +26,7 @@ class Meeting < ActiveRecord::Base
   
   accepts_nested_attributes_for :participants
   
-  validates :author, :project, :subject, :presence => true
+  validates :author, :project, :subject, :date, :start_hour, :end_hour, :presence => true
   validates :subject, :length => {:maximum => 80}
   validate :issue_is_visible, :unless => proc{ |meeting| meeting.issue_id.blank?}
   validate :status_transition, :unless => proc{ User.current.admin }

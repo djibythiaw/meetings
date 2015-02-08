@@ -21,10 +21,10 @@
 				<p><%= f.select :status, options_for_meeting_status(f.object) %></p>
 			<% end %>
 			<p>
-				<%= f.text_field :date, :size => 10 %><%= calendar_for('meeting_date') %>
+				<%= f.text_field :date, :size => 10, :required => true %><%= calendar_for('meeting_date') %>
 			</p>
 			<p>
-				<%= label_tag :start_hour, l(:field_start_hour) %>
+				<%= f.label_for_field :start_hour, :required => true%>
 				<%= f.time_select :start_hour, {:ampm => true, :include_blank => true, :minute_step => 15} %>
 			</p>			
 			<p id="issue">
@@ -40,7 +40,7 @@
 				<%= f.text_field :estimated_hours , :size => 3 %>
 			</p>
 			<p>
-				<%= label_tag :end_hour, l(:field_end_hour) %>
+				<%= f.label_for_field :end_hour, :required => true %>
 				<%= f.time_select :end_hour, {:ampm => true, :include_blank => true, :minute_step => 15} %>
 			</p>
 			<p>
