@@ -9,6 +9,8 @@ fr:
   field_end_hour: Fin
   field_participants: Participants 
   field_meeting: Réunion
+  field_updated_at: Mise à jour
+  field_created_at: Créé
   notice_meeting_successful_create: Réunion créé
   notice_meeting_with_time_entries: Une réunion ne peut être supprimée si du temps a déjà été passé 
   permission_view_meetings: Voir les réunions

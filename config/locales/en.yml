@@ -11,6 +11,8 @@ en:
   field_participants: Participants 
   field_meeting: Meeting
   field_location: Location
+  field_updated_at: Updated
+  field_created_at: Created
   notice_meeting_successful_create: Meeting created 
   notice_meeting_with_time_entries: Meeting with time spent can not be eliminated 
   permission_view_meetings: View meetings 
