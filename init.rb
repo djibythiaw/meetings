@@ -24,7 +24,7 @@ Redmine::Plugin.register :meetings do
 =end
   menu :project_menu , 
         :meetings, {:controller => 'meetings', :action => 'index'}, 
-        :caption => :label_meeting_plural, :after => :new_issue, :param => :project_id,
+        :caption => :label_meeting_plural, :after => :news, :param => :project_id,
         :if => Proc.new{ |project| User.current.allowed_to?(:view_meetings, project ) }
   
   project_module :meetings do
