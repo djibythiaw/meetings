@@ -16,10 +16,12 @@ Redmine::Plugin.register :meetings do
   description 'Plugin for managing meetings to allow users report time on meetings'
   version '0.0.2'
   
-  menu :application_menu , 
+=begin
+  menu :application_menu ,
         :meetings, {:controller => 'meetings', :action => 'index'}, 
         :caption => :label_meeting_plural,
         :if => Proc.new{ User.current.allowed_to?(:view_meetings, nil, :global => true) }
+=end
   menu :project_menu , 
         :meetings, {:controller => 'meetings', :action => 'index'}, 
         :caption => :label_meeting_plural, :after => :new_issue, :param => :project_id,
