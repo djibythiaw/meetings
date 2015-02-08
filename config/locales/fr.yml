@@ -9,6 +9,7 @@ fr:
   field_end_hour: Fin
   field_participants: Participants 
   field_meeting: Réunion
+  field_location: Lieu
   field_updated_at: Mise à jour
   field_created_at: Créé
   notice_meeting_successful_create: Réunion créé
