@@ -14,7 +14,8 @@ module MeetingQueriesHelper
       @query = MeetingQuery.new(:name => "_")
       @query.project = @project
       build_query_from_params
-      session[:meeting_query] = {:project_id => @query.project_id, :filters => @query.filters, :group_by => @query.group_by, :column_names => @query.column_names}
+      @query.default_columns_names
+      session[:meeting_query] = {:project_id => @query.project_id, :filters => @query.filters, :group_by => @query.group_by, :column_names => @query.default_columns_names}
     else
       # retrieve from session
       @query = MeetingQuery.find_by_id(session[:meeting_query][:id]) if session[:meeting_query][:id]

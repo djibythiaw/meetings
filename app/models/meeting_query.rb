@@ -33,6 +33,10 @@ class MeetingQuery < Query
                                  :float => [ "=", ">=", "<=", "><", "!*", "*" ],
                                  :relation => ["=", "=p", "=!p", "!p", "!*", "*"]}
   end
+
+  def default_columns_names
+    Setting.meetings_list_default_columns.map(&:to_sym)
+  end
   
   def available_filters
     return @available_filters if @available_filters
