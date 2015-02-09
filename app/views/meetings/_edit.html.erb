@@ -9,7 +9,7 @@
 
         </fieldset>
     <% end %>
-    <% if User.current.allowed_to?(:log_time, @project) %>
+    <% if false %>
         <fieldset class="tabular">
         	<legend><%= l(:button_log_time) %></legend>
         	<%= labelled_fields_for :time_entry, @time_entry do |time_entry| %>

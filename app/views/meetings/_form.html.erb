@@ -36,9 +36,9 @@
 			<% unless f.object.new_record? %>
 				<p></p>	
 			<% end %>	
-			<p>
+			<!--<p>
 				<%= f.text_field :estimated_hours , :size => 3 %>
-			</p>
+			</p>-->
 			<p>
 				<%= f.label_for_field :end_hour, :required => true %>
 				<%= f.time_select :end_hour, {:ampm => true, :include_blank => true, :minute_step => 15} %>
