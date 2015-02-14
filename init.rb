@@ -23,8 +23,8 @@ Redmine::Plugin.register :meetings do
         :if => Proc.new{ User.current.allowed_to?(:view_meetings, nil, :global => true) }
 =end
   menu :project_menu , 
-        :meetings, {:controller => 'meetings', :action => 'index'}, 
-        :caption => :label_meeting_plural, :after => :news, :param => :project_id,
+        :meetings, {:controller => 'meetings', :action => 'index'},
+        :caption => :label_meeting_plural, :after => :my, :param => :project_id,
         :if => Proc.new{ |project| User.current.allowed_to?(:view_meetings, project ) }
   
   project_module :meetings do
