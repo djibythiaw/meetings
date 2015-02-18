@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 ActionDispatch::Callbacks.to_prepare do
   # require to refresh in development
   # require to load only when server starts
