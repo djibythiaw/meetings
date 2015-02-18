@@ -16,9 +16,11 @@ Issue.safe_attributes 'meeting_id'
 
 Redmine::Plugin.register :meetings do
   name 'Meetings plugin'
-  author 'Bishma Stornelli'
-  description 'Plugin for managing meetings to allow users report time on meetings'
-  version '0.0.2'
+  author 'Ministère de la santé'
+  description 'Plugin destiné au ministère de la santé du Sénégal pour adopter Redmine en fonction de leurs besoins'
+  version '0.0.3'
+  url 'http://www.sante.gouv.sn/'
+  author_url 'http://www.sante.gouv.sn/'
   
 =begin
   menu :application_menu ,
