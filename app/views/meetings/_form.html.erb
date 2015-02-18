@@ -27,10 +27,6 @@
 				<%= f.label_for_field :start_hour, :required => true%>
 				<%= f.time_select :start_hour, {:ampm => true, :include_blank => true, :minute_step => 15} %>
 			</p>			
-			<p id="issue">
-				<%= f.text_field :issue_id, :size => 10 %><a href="#" class="icon icon-add"></a>
-			</p>
-			<%= javascript_tag "observeAutocompleteField('meeting_issue_id', '#{escape_javascript auto_complete_issues_path}')" %>
 		</div>
 		<div class="splitcontentright">		
 			<% unless f.object.new_record? %>

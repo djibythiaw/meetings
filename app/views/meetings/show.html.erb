@@ -23,29 +23,14 @@
 				<td><%= @meeting.date %></td>				
 			</tr>
 			<tr>
-				<th><%= l(:field_estimated_hours) %>:</th>
-				<td><%= @meeting.estimated_hours %></td>	
 				<th><%= l(:field_start_hour) %>:</th>
-				<td><%= @meeting.start_hour.strftime("%I:%M %p") rescue "" %></td>			
-				
+				<td><%= @meeting.start_hour.strftime("%I:%M %p") rescue "" %></td>
+			    <th><%= l(:field_location) %>:</th>
+			    <td><%= @meeting.location %></td>
 			</tr>
 			<tr>
-				<% if User.current.allowed_to?(:view_time_entries, @project) %>    				
-					<th><%= l(:label_spent_time) %>:</th>
-					<td>
-						<%= @meeting.total_spent_hours > 0 ? link_to( l_hours(@meeting.total_spent_hours), project_meeting_time_entries_path(@project, @meeting), :class => 'spent-time') : "-" %>						
-					</td>
-				<% else %>
-					<th></th><td></td>
-				<% end %>
 				<th><%= l(:field_end_hour) %>:</th>
 				<td><%= @meeting.end_hour.strftime("%I:%M %p") rescue "" %></td>
-			</tr>
-			<tr>
-				<th><%= l(:field_issue) %>:</th>
-				<td><%= link_to_issue(@meeting.issue) if @meeting.issue %></td>
-				<th><%= l(:field_location) %>:</th>
-				<td><%= @meeting.location %></td>
 			</tr>
 			<tr>
 				<th><%= l(:field_participants) %>:</th>

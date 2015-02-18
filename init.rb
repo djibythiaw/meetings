@@ -8,7 +8,11 @@ ActionDispatch::Callbacks.to_prepare do
   require 'meetings/issue_patch'
   require 'meetings/mailer_patch'
   require 'meetings/user_patch'
+  require 'meetings/issue_hook'
 end
+
+#Adding safe attributes
+Issue.safe_attributes 'meeting_id'
 
 Redmine::Plugin.register :meetings do
   name 'Meetings plugin'

@@ -19,7 +19,7 @@ class MeetingQuery < Query
       QueryColumn.new(:date),
       # QueryColumn.new(:estimated_hours),
       QueryColumn.new(:created_at, :default_order => 'desc'),
-      QueryColumn.new(:issue, :caption => :label_related_issues),
+      #QueryColumn.new(:issue, :caption => :label_related_issues),
     ]
     @operators_by_filter_type = { :list => [ "=", "!" ],
                                  :list_status => [ "=", "!", "*" ],

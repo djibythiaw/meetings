@@ -20,6 +20,6 @@ for prefix in [ActionController::Base.config.relative_url_root, "/"] do
           end
         end
       end
-    end    
+    end
   end
 end
