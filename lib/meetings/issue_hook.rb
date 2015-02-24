@@ -5,7 +5,7 @@ module Meetings
     def view_issues_show_details_bottom(context={ })
       issue = context[:issue]
       snippet = ''
-      meeting = issue.meeting_id.nil? ? nil : Meeting.find(issue.meeting_id)
+      meeting = (issue.meeting_id.nil? || issue.meeting_id == 0) ? nil : Meeting.find(issue.meeting_id)
       snippet += "<tr><th>#{l(:label_meeting)}</th><td>#{meeting.nil? ? '-' : meeting.subject}</td></tr>"
       return snippet
     end

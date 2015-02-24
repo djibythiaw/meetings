@@ -118,7 +118,14 @@ class MeetingsController < ApplicationController
 
   def destroy
     begin
-      @meeting.destroy      
+      #Récupérer les issues liées à ce meetings et suppimer le lien
+      issues = Issue.where("meeting_id = #{@meeting.id}").all
+      issues.each do |issue|
+        issue.meeting_id = 0
+        issue.save
+      end
+
+      @meeting.destroy
       respond_to do |format|
         format.html { redirect_back_or_default(:action => 'index', :project_id => @project) }
       end
