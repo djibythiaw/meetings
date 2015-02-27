@@ -13,6 +13,7 @@ en:
   field_location: Location
   field_updated_at: Updated
   field_created_at: Created
+  field_meeting_type: Type
   notice_meeting_successful_create: Meeting created 
   notice_meeting_with_time_entries: Meeting with time spent can not be eliminated 
   permission_view_meetings: View meetings 
@@ -30,3 +31,4 @@ en:
     prompts:
       hour: Hour 
       minute: Minute
+  label_meetings_type: Meeting types

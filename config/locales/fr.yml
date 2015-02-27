@@ -12,6 +12,7 @@ fr:
   field_location: Lieu
   field_updated_at: Mise à jour
   field_created_at: Créé
+  field_meeting_type: Type
   notice_meeting_successful_create: Réunion créé
   notice_meeting_with_time_entries: Une réunion ne peut être supprimée si du temps a déjà été passé 
   permission_view_meetings: Voir les réunions
@@ -27,3 +28,4 @@ fr:
     prompts:
       hour: Heure
       minute: Minute
+  label_meetings_type: Types de réunion

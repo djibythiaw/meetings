@@ -44,9 +44,21 @@
 			</p>
 		</div>
 	</div>
-	<p>
-		<%= label_tag :participants, l(:field_participants) %>
-		<%= select_tag "meeting[participant_ids][]", principals_options_for_select(@meeting.assignable_users, @meeting.participants) , :multiple => true %>
-	</p>
-		
+
+	<div class="splitcontent">
+
+	  <div class="splitcontentleft">
+		<p>
+		  <%= label_tag :participants, l(:field_participants) %>
+		  <%= select_tag "meeting[participant_ids][]", principals_options_for_select(@meeting.assignable_users, @meeting.participants), :multiple => true %>
+		</p>
+	  </div>
+	  <div class="splitcontentright">
+		<p>
+		  <%= f.label_for_field :meeting_type %>
+		  <%= f.select :meeting_type, options_for_select(Setting.plugin_meetings['meetings_type'].split(/\r\n/), @meeting.meeting_type), include_blank: true %>
+		</p>
+	  </div>
+	</div>
+
 <% end %>

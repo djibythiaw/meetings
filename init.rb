@@ -23,13 +23,12 @@ Redmine::Plugin.register :meetings do
   version '0.0.3'
   url 'http://www.sante.gouv.sn/'
   author_url 'http://www.sante.gouv.sn/'
-  
-=begin
-  menu :application_menu ,
-        :meetings, {:controller => 'meetings', :action => 'index'}, 
-        :caption => :label_meeting_plural,
-        :if => Proc.new{ User.current.allowed_to?(:view_meetings, nil, :global => true) }
-=end
+
+  #Settings page of plugin
+  settings :default => {
+       :meetings_type => nil
+   }, :partial => 'settings/settings'
+
   menu :project_menu , 
         :meetings, {:controller => 'meetings', :action => 'index'},
         :caption => :label_meeting_plural, :after => :my, :param => :project_id,

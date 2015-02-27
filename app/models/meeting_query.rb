@@ -17,6 +17,7 @@ class MeetingQuery < Query
       QueryColumn.new(:participants, :groupable => true),
       QueryColumn.new(:updated_at, :default_order => 'desc'),
       QueryColumn.new(:date),
+      QueryColumn.new(:meeting_type),
       # QueryColumn.new(:estimated_hours),
       QueryColumn.new(:created_at, :default_order => 'desc'),
       #QueryColumn.new(:issue, :caption => :label_related_issues),
@@ -49,7 +50,8 @@ class MeetingQuery < Query
       "date" => { :type => :date, :order => 9 },
       # "estimated_hours" => { :type => :float, :order => 13 },
       "created_at" => { :type => :date_past, :order => 11 },
-      "updated_at" => { :type => :date_past, :order => 12 }
+      "updated_at" => { :type => :date_past, :order => 12 },
+      "meeting_type" => { :type => :string, :order => 13 }
     }
     principals = []
     if project

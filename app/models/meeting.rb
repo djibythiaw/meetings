@@ -56,6 +56,7 @@ class Meeting < ActiveRecord::Base
     'issue_id',
     'participant_ids',
     'location',
+    'meeting_type',
     :if => lambda {|meeting, user| meeting.new_record? || user.allowed_to?(:edit_meetings, meeting.project) }
 
   safe_attributes 'notes',

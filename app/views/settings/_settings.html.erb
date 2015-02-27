@@ -1,0 +1,8 @@
+<fieldset>
+  <legend><%= l(:label_settings) %></legend>
+  <p>
+    <%= label_tag l(:label_meetings_type) %>
+    <%= text_area_tag 'settings[meetings_type]', @settings[:meetings_type], rows: 5, cols: 10 %>
+    <em class="info"><%= l(:text_line_separated) %></em>
+  </p>
+</fieldset>

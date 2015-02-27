@@ -31,6 +31,8 @@
 			<tr>
 				<th><%= l(:field_end_hour) %>:</th>
 				<td><%= @meeting.end_hour.strftime("%I:%M %p") rescue "" %></td>
+			    <th><%= l(:field_meeting_type) %>:</th>
+			    <td><%= @meeting.meeting_type %></td>
 			</tr>
 			<tr>
 				<th><%= l(:field_participants) %>:</th>
